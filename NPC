@@ -7,17 +7,17 @@ public class NPC : MonoBehaviour
     int health = 10;
     int level = 5;
     float speed = 1.2f;
-    Vector3 newPosition;
+    Vector3 newPosition;      // обьявление переменной с позицией обьекта
     void Start()
     {
         health += level;
-        print(health);
-        newPosition = transform.position;
+        print(health);             // вывод здоровья в консоль
+        newPosition = transform.position;    //
     }
 
     void Update()
     {
-        newPosition.z += speed * Time.deltaTime;
+        newPosition.z += speed * Time.deltaTime;    //обновление позиции  обьекта
         transform.position = newPosition;
     }
 }
